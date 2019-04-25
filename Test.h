@@ -28,5 +28,20 @@ class Test
     void test_13();
     void test_14();
     void test_15();
+    void test_16();
+    void test_17();
+    void test_18();
+    void test_19();
+    void test_20();
+    void test_21();
+    void test_22();
+    void test_23();
+    void test_24();
+    void test_25();
+    void test_26();
+    void test_27();
+    void test_28();
+    void test_29();
+    void test_30();
 };
 #endif 
