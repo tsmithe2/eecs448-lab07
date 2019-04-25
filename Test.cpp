@@ -6,7 +6,6 @@ using namespace std;
 
 //Need to make function to run the tests
 void Test::test_01()
-void Test::test_01()
 {
     cout << "Test 01: After calling addFront once, the IsEmpty function should return false: ";
     LinkedListOfInts test1List;
