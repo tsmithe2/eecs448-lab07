@@ -18,4 +18,4 @@ Test.o: Test.h
 
 #DON'T delete LinkedList.o!
 clean:
-	rm main.o *.*~ prog
+	rm main.o Test.o prog
