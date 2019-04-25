@@ -69,6 +69,100 @@ void Test::test_08()
     showResults(test8List.size() == 1);
 }
 
+void Test::test_09()
+{
+    cout << "Test_09: calling addBack more than once, size should return the correct value: ";
+    LinkedListOfInts test9List;
+    test9List.addBack(0);
+    test9List.addBack(2);
+    test9List.addBack(4);
+    test9List.addBack(6);
+    test9List.addBack(8);
+    showResults(test9List.size() == 5);
+}
+
+void Test::test_10()
+{
+    cout << "Test_10: after a series of addBack, addFront, removeBack, and removeFront, size should return the correct value: ";
+    LinkedListOfInts test10List;
+    test10List.addBack(0);
+    test10List.addFront(7);
+    test10List.addBack(1);
+    test10List.addBack(10);
+    test10List.addFront(5);
+    test10List.addFront(8);
+    test10List.addBack(9);
+    test10List.addFront(11);
+    test10List.removeBack();
+    test10List.removeFront();
+    test10List.removeFront();
+    showResults(test10List.size() == 5);
+}
+
+void Test::test_11()
+{
+    cout << "Test_11: calling the search function returns false if the list is empty: ";
+    LinkedListOfInts test11List;
+    showResults(test11List.search(4) == false);
+}
+
+void Test::test_12()
+{
+    cout << "Test_12: calling a series of addBack and removeBack yields a correct size value: ";
+    LinkedListOfInts test12List;
+    test12List.addBack(6);
+    test12List.addBack(7);
+    test12List.addBack(4);
+    test12List.addBack(8);
+    test12List.addBack(10);
+    test12List.addBack(12);
+    test12List.addBack(15);
+    test12List.removeBack();
+    test12List.removeBack();
+    test12List.removeBack();
+    showResults(test12List.size() == 4);
+}
+
+void Test::test_13()
+{
+    cout << "Test_13: calling a series of addFront and removeFront yields a correct size value: ";
+    LinkedListOfInts test13List;
+    test13List.addFront(4);
+    test13List.addFront(0);
+    test13List.addFront(2);
+    test13List.addFront(7);
+    test13List.addFront(3);
+    test13List.addFront(1);
+    test13List.removeFront();
+    test13List.removeFront();
+    test13List.removeFront();
+    showResults(test13List.size() == 3);
+}
+
+void Test::test_14()
+{
+    cout << "Test_14: if the same value is added to the list, search returns true: ";
+    LinkedListOfInts test14List;
+    test14List.addBack(2);
+    test14List.addFront(1);
+    test14List.addBack(2);
+    test14List.addFront(2);
+    test14List.addBack(2);
+    test14List.addBack(1);
+    showResults(test14List.search(2));
+}
+
+void Test::test_15()
+{
+    cout << "Test_15: if a specific value has not been added to the list, search returns false: ";
+    LinkedListOfInts test15List;
+    test15List.addBack(2);
+    test15List.addFront(4);
+    test15List.addFront(6);
+    test15List.addBack(8);
+    showResults(test15List.search(10) == false);
+}
+
 void Test::runTests()
 {
     test_01();
@@ -79,7 +173,13 @@ void Test::runTests()
     test_06();
     test_07();
     test_08();
-    
+    test_09();
+    test_10();
+    test_11();
+    test_12();
+    test_13();
+    test_14();
+    test_15();
 }
 
 void Test::showResults(bool showResult)
