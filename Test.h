@@ -14,6 +14,6 @@ class Test
     bool testSimilarity(LinkedListOfInts testSimilarity, vector<int> idealValue);
 
     void test_01();
-
+    void test_02();
 };
 #endif 
